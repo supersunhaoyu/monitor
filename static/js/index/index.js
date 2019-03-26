@@ -152,6 +152,22 @@ function GetInfo(){
                             };
                         });
                 }
+                if ("/home" == disk.MountOn) {
+                    $('#homedisk').each(function() {
+                        var homeinfo = disk.IsUsed
+                        homeinfo = homeinfo.replace("%", "");
+                        console.log(homeinfo);
+                        var num = homeinfo * 3.6;
+                        num = num.toFixed(2)
+                        $("#homedisk").find('span').html(homeinfo)
+                        if (num<=180) {
+                            $("#homedisk").find('.right').css('transform', "rotate(" + num + "deg)");
+                        } else {
+                            $("#homedisk").find('.right').css('transform', "rotate(180deg)");
+                            $("#homedisk").find('.left').css('transform', "rotate(" + (num - 180) + "deg)");
+                            };
+                        });
+                }
             }
         },
     });
@@ -165,6 +181,18 @@ function getCpuInfo(){
             $('#cpu').each(function() {
                 var cpu =  100 - data.CpuFree;
                 cpu = cpu.toFixed(2);
+                if (cpu > 20 ){
+                    $("#cpu .pie_left").css("background-color", "red")
+                    $("#cpu .pie_right").css("background-color", "red")
+                }
+                else if(6 < cpu <= 10){
+                    $("#cpu .pie_left").css("background-color", "#fff")
+                    $("#cpu .pie_right").css("background-color", "#fff")
+                }
+                if(cpu < 6){
+                    $("#cpu .pie_left").css("background-color", "#000")
+                    $("#cpu .pie_right").css("background-color", "#000")
+                }
                 var num = cpu * 3.6;
                 num = num.toFixed(1)
                 $("#cpu").find('span').html(cpu)
