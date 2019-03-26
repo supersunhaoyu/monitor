@@ -10,6 +10,20 @@
   <script src="/static/js/bootstrap.min.js"></script>
   <script src="/static/js/jquey.min.js"></script>
   <script src="/static/js/index/index.js"></script>
+  <style>
+  ul{
+    list-style: none;
+    margin: 0;
+    paddning:0;
+     
+  }
+  li{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    float:left;
+  }
+  </style>
   <title>Document</title>
 </head>
 <body>
@@ -120,45 +134,68 @@
       <div class="panel panel-default">
         <div class="panel-heading">状态</div>
         <div class="panel-body" style="height: 200px;">
-          <div class="circle col-md-offset-1" id="cpu">
-            <div class="pie_left">
-            <div class="left"></div>
-            </div>
-            <div class="pie_right">
-            <div class="right"></div>
-            </div>
-            <div class="mask"><span>0</span>%<div>CPU</div></div>
-            </div>
+            <ul>
+                <li class="col-md-offset-1">
+                        <div class="circle" id="cpu">
+                          <div class="pie_left">
+                          <div class="left"></div>
+                          </div>
+                          <div class="pie_right">
+                          <div class="right"></div>
+                          </div>
+                          <div class="mask"><span>0</span>%<div>CPU</div></div>
+                          </div>
+                </li>
+                <li class="col-md-offset-1">
+                        <div class="circle" id="mem">
+                          <div class="pie_left">
+                          <div class="left"></div>
+                          </div>
+                          <div class="pie_right">
+                          <div class="right"></div>
+                          </div>
+                          <div class="mask"><span>0</span>%<div>内存</div></div>
+                          </div>
+          
+                </li>
+                <li class="col-md-offset-1">
+                        <div class="circle" id="index">
+                          <div class="pie_left">
+                          <div class="left"></div>
+                          </div>
+                          <div class="pie_right">
+                          <div class="right"></div>
+                          </div>
+                          <div class="mask"><span>0</span>%<div>/</div></div>
+                          </div>
+                </li>
+                <li class="col-md-offset-1">
+                        <div class="circle" id="boot">
+                          <div class="pie_left">
+                          <div class="left"></div>
+                          </div>
+                          <div class="pie_right">
+                          <div class="right"></div>
+                          </div>
+                          <div class="mask"><span>0</span>%<div>/boot</div></div>
+                </li>
+                <li class="col-md-offset-1">
+                    <div class="circle" id="homedisk">
+                      <div class="pie_left">
+                      <div class="left"></div>
+                      </div>
+                      <div class="pie_right">
+                      <div class="right"></div>
+                      </div>
+                      <div class="mask"><span>0</span>%<div>/home</div></div>
+            </li>
+              </ul>
+          
 
-            <div class="circle col-md-offset-3" id="mem">
-            <div class="pie_left">
-            <div class="left"></div>
-            </div>
-            <div class="pie_right">
-            <div class="right"></div>
-            </div>
-            <div class="mask"><span>0</span>%<div>内存</div></div>
-            </div>
+            
+           
 
-            <div class="circle col-md-offset-5" id="index">
-              <div class="pie_left">
-              <div class="left"></div>
-              </div>
-              <div class="pie_right">
-              <div class="right"></div>
-              </div>
-              <div class="mask"><span>0</span>%<div>/</div></div>
-              </div>
-
-              <div class="circle col-md-offset-7" id="boot">
-                <div class="pie_left">
-                <div class="left"></div>
-                </div>
-                <div class="pie_right">
-                <div class="right"></div>
-                </div>
-                <div class="mask"><span>0</span>%<div>/boot</div></div>
-                </div>
+              
             
             
             
