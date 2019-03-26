@@ -27,7 +27,7 @@
   <title>Document</title>
 </head>
 <body>
-    <div class="col-md-6">
+    <!-- <div class="col-md-6">
         <div class="panel panel-default">
           <div class="panel-heading">计算机硬件信息使用情况</div>
             <div class="panel-body">
@@ -129,7 +129,7 @@
                 </table>
             </div>
           </div>
-    </div>
+    </div> -->
     <div class="col-md-12">
       <div class="panel panel-default">
         <div class="panel-heading">状态</div>
